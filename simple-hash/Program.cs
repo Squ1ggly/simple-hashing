@@ -32,7 +32,7 @@ if (hashKey == "")
 
 string password = getInputFromUser("Hash This\n> ");
 
-Console.Write("Hashed Key\n> ");
+Console.WriteLine("Hashed Key:");
 using (HMACSHA256 hmac = new(Encoding.UTF8.GetBytes(hashKey)))
 {
     byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
@@ -53,3 +53,5 @@ if (!keySaved)
         }
     }
 }
+Console.Write("...Enter to close");
+Console.ReadLine();
